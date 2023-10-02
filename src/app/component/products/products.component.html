@@ -1,0 +1,39 @@
+<section class="container">
+  <span>
+    <a>
+      <h2>All products</h2>
+      <img [src]="'/assets/carte-de-shopping.png'" alt="" />
+    </a>
+  </span>
+  <span>
+    <a>
+      <h2>Jewellery</h2>
+      <img src="/add-to-cart/src/assets/Package-PNG-Clipart.png" alt="" />
+    </a>
+  </span>
+  <span>
+    <a>
+      <h2>Electronics</h2>
+      <img src="/add-to-cart/src/assets/Package-PNG-Clipart.png" alt="" />
+    </a>
+  </span>
+  <span>
+    <a>
+      <h2>Fashion</h2>
+      <img src="/add-to-cart/src/assets/Package-PNG-Clipart.png" alt="" />
+    </a>
+  </span>
+</section>
+<div class="line"></div>
+
+<section class="products">
+  <div *ngFor="let item of productList">
+    <div class="allProducts">
+      <img src="{{ item.image }}" alt="" />
+      <h5>{{ item.title }}</h5>
+      <p>{{ item.category }}</p>
+      <p>{{ item.description }}</p>
+      <button (click)="addToCart(item)">Add to cart</button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+
+.header-bar {
+  height: 50px;
+  width: 100%;
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header-bar > h1 {
+  position: relative;
+  top: -5px;
+  font-size: 20px;
+  font-weight: 650;
+  color: #fff;
+  padding: 5px;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+}
+.header-bar>input {
+  position: relative;
+  top: -5px;
+  left: 5px;
+  width: 30%;
+  height: 20px;
+  border: 1px blue solid;
+  border-radius: 2px;
+}
+.header-bar> .shopping-cart {
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 12px;
+  position: absolute;
+  right: 20px;
+  border: none;
+
+}
+.header-bar> .shopping-cart>img {
+width: 25px;
+height: 20px;
+}
+.header-bar> .shopping-cart:hover {
+  transform: scale(1.2);
+}

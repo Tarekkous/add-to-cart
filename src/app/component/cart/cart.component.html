@@ -1,0 +1,46 @@
+<section class="myCart" *ngIf="false">
+  <h1>My Cart</h1>
+  <div class="cart-center">
+    <img src="" alt="" />
+    <h2>Your cart is empty</h2>
+    <h5>Add item to it now</h5>
+    <button>Shop Now</button>
+  </div>
+</section>
+<section *ngIf="true">
+  <div class="container">
+    <div class="card-table">
+      <div class="cart-products">
+        <table>
+          <thead>
+            <tr>
+              <th>Sr.no</th>
+              <th>Product name</th>
+              <th>Product image</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>1</td>
+                <td>Iphone</td>
+                <td>Some image</td>
+                <td>This is branded phone</td>
+                <td>50.000</td>
+                <td>
+                  <button mat-button color="warn">Delete</button>
+                </td>
+                <td>20</td>
+                <td>20</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</section>
