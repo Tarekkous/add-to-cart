@@ -19,6 +19,10 @@ export class ProductsComponent {
   getProducts() {
     this._apiService.getApi().subscribe((response: any) => {
       this.productList = response
+      //on itère sur le tableau pour avoir accés aux deux élements quantity et total
+      this.productList.forEach((a:any) => {
+        Object.assign(a,{quantity:1,total:a.price})
+      });
     });
   }
   addToCart(item : any){

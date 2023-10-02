@@ -22,12 +22,14 @@ export class CartService {
     this.cartItemList.push(product)
     this.productList.next(this.cartItemList)
     this.getTotalPrice()
+    console.log(this.cartItemList);
   }
   getTotalPrice(){
     let grandTotal = 0;
     this.cartItemList.map((a:any)=>{
       grandTotal += a.total;
     })
+    return grandTotal;
   }
 
   removeCartItem(product : any){

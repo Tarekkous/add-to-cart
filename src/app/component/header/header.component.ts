@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CartService } from 'src/app/service/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -7,17 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  constructor(private _router:Router){
+  public totalProducts :number =0;
+  constructor(private _router:Router, private _cartService : CartService){
 
   }
   ngOnInit():void{
+  this._cartService.getProducts().subscribe((res:any)=>{
+    this.totalProducts = res.length;
+  })
+  }
 
-  }
-  goCart(){
-    this._router.navigate(['cart'])
-  }
-  goProducts(){
-    this._router.navigate(['products'])
-
-  }
 }
