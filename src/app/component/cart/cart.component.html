@@ -1,13 +1,13 @@
-<section class="myCart" *ngIf="false">
+<section class="myCart" *ngIf="products.length == 0">
   <h1>My Cart</h1>
   <div class="cart-center">
     <img src="" alt="" />
     <h2>Your cart is empty</h2>
     <h5>Add item to it now</h5>
-    <button>Shop Now</button>
+    <button routerLink="/products">Shop Now</button>
   </div>
 </section>
-<section *ngIf="true">
+<section *ngIf="products.length != 0">
   <div class="container">
     <div class="card-table">
       <div class="cart-products">
@@ -29,14 +29,24 @@
                 <td>{{i+1}}</td>
                 <td>{{item.title}}</td>
                 <td><img style="width :120px" src="{{item.image}}" alt=""></td>
-                <td>{{item.description}}</td>
-                <td>{{item.price}}</td>
-                <td>{{item.quantity}}</td>
-                <td>{{item.total}}</td>
+                <td style="width: 25%;">{{item.description}}</td>
+                <td style="width: 12%;">{{item.price}}</td>
+                <td style="width: 12%;">{{item.quantity}}</td>
+                <td style="width: 12%;">{{item.total}}</td>
 
                 <td>
                   <button (click)="removeItem(item)" mat-button color="warn">Delete</button>
                 </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button mat-button color="warn" (click)="emptyCart()">Empty cart</button></td>
+              <td><button mat-button color="primary" routerLink="/products">Shop more</button></td>
+              <td><button mat-button color="warn">Chekout</button></td>
+              <td><strong>grand Total : ${{grandtotal}}</strong></td>
             </tr>
           </tbody>
         </table>

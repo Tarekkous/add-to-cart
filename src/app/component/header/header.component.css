@@ -12,7 +12,7 @@
 }
 .header-bar > h1 {
   position: relative;
-  top: -5px;
+  top: 5px;
   font-size: 20px;
   font-weight: 650;
   color: #fff;
